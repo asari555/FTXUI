@@ -38,6 +38,7 @@ Component Menu(ConstStringListRef entries,
                int* selected_,
                Ref<MenuOption> = {});
 Component MenuEntry(ConstStringRef label, Ref<MenuEntryOption> = {});
+Component Dropdown(ConstStringListRef entries, int* selected);
 Component Radiobox(ConstStringListRef entries,
                    int* selected_,
                    Ref<RadioboxOption> option = {});
@@ -54,6 +55,7 @@ Component Renderer(Component child, std::function<Element()>);
 Component Renderer(std::function<Element()>);
 Component Renderer(std::function<Element(bool /* focused */)>);
 Component CatchEvent(Component child, std::function<bool(Event)>);
+Component Maybe(Component, bool* show);
 
 namespace Container {
 Component Vertical(Components children);
