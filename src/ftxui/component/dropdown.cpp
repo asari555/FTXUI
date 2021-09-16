@@ -27,7 +27,8 @@ Component Dropdown(ConstStringListRef entries, int* selected) {
         return vbox({
                    checkbox_->Render(),
                    separator(),
-                   radiobox_->Render() | frame | size(HEIGHT, LESS_THAN, 6),
+                   radiobox_->Render() | vertical_scroll_indicator | frame |
+                       size(HEIGHT, LESS_THAN, 6),
                }) |
                border;
       }
